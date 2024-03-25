@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 import { SmileOutlined, CommentOutlined, CodeOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 
@@ -8,22 +8,19 @@ import "./customNavbar.css"
 
 const items = [
   {
-    label: 'About',
+    label: <Link to="/about">About</Link>,
     key: 'about',
-    icon: <SmileOutlined />,
-    onClick: () => navigate('/about'),
+    icon: <SmileOutlined />
   },
   {
-    label: 'Work',
+    label: <Link to="/work">Work</Link>,
     key: 'work',
-    icon: <CodeOutlined />,
-    onClick: () => navigate('/work'),
+    icon: <CodeOutlined />
   },
   {
-    label: 'Contacts',
-    key: 'contacts',
+    label: <Link  to="/contact">Contact</Link>,
+    key: 'contact',
     icon: <CommentOutlined />,
-    onClick: () => navigate('/contacts'),
   }
 ];
 
@@ -39,7 +36,7 @@ const CustomNavbar = () => {
   onClick={onClick} 
   selectedKeys={[current]} 
   mode="horizontal" 
-  items={items}/>
+  items={items} />
   );
 };
 

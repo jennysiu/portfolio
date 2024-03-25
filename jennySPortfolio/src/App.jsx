@@ -1,8 +1,13 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
 // internal imports
+import About from "./pages/About";
+import Work from "./pages/Work";
+import Contact from "./pages/Contact";
+
 import './App.css'
 import Navbar from "./components/NavBar/CustomNavbar"
 
@@ -12,22 +17,19 @@ function App() {
   return (
     <>
       <div>
+
+      <Router>
       <Navbar />
-
+        {/* <Header /> */}
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
 
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
