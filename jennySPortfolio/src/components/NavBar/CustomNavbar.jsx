@@ -32,12 +32,19 @@ const CustomNavbar = () => {
   };
 
   return (
-  <Menu 
-  onClick={onClick} 
-  selectedKeys={[current]} 
-  mode="horizontal" 
-  items={items} />
-  );
+  <>
+  <div className='navbar-container'>
+    <div className='brand-name'>
+      <Link to="\">Jenny Siu</Link>
+    </div>
+    <Menu 
+    onClick={onClick} 
+    selectedKeys={[current]} 
+    mode="horizontal" 
+    items={items} />
+  </div>
+  </>
+  )
 };
 
 export default CustomNavbar;

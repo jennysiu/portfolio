@@ -21,11 +21,11 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* colour palette */
-  --primary-purple: #7B4BFF;
+  --primary-purple: #646cff;
   --secondary-purple: #A892EE;
-  --accent-purple: #503E9D;
+  --accent-purple: #535bf2;
   --neutral-light: #F5F5F5;
-  --neutral-dark: #323232;
+  --neutral-dark: #242424;
   --highlight-accent: #00D1B2;
 }
 
