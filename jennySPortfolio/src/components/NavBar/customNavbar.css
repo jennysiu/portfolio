@@ -1,0 +1,56 @@
+  /* colour palette */
+  /* --primary-purple: #7B4BFF;
+  --secondary-purple: #A892EE;
+  --accent-purple: #503E9D;
+  --neutral-light: #F5F5F5;
+  --neutral-dark: #323232;
+  --highlight-accent: #00D1B2; */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: var(--primary-purple); */
+}
+
+.brand-name {
+  font-weight: bold;
+  margin: 0.3em;
+  margin-left: 0.4em;
+}
+
+.brand-name a {
+  font-size: 34px;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* ant design menu styling override */
+/* menu container */
+.ant-menu,
+.ant-menu-item,
+.ant-menu-title-content,
+.ant-menu-item-icon  {
+  background-color: var(--neutral-dark);
+  color: var(--neutral-light);
+}
+
+/* hover page link bottom border colour */
+.ant-menu-light.ant-menu-horizontal > .ant-menu-item:hover::after,
+.ant-menu-light.ant-menu-horizontal > .ant-menu-submenu:hover::after {
+  border-bottom-color: var(--primary-purple);
+}
+
+/* selected page botom border colour */
+.ant-menu-light.ant-menu-horizontal >
+.ant-menu-item-selected::after {
+  border-bottom-color: var(--primary-purple);
+}
+
+.ant-menu-item {
+  color: var(--neutral-light) !important;
+}
+
+/* current page icon colour */
+.ant-menu-item-selected {
+  color: var(--neutral-light) !important;
+}
